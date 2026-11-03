@@ -1,0 +1,232 @@
+:root {
+  --bg: #f4f6fa;
+  --surface: #ffffff;
+  --surface-muted: #f8fafc;
+  --ink: #172033;
+  --ink-soft: #3d4a5c;
+  --muted: #5a6678;
+  --border: #d9e1ea;
+  --brand: #0d5a6b;
+  --brand-strong: #09414e;
+  --brand-soft: #e4f1f3;
+  --accent: #9a4b00;
+  --ok: #0f6b3d;
+  --ok-soft: #e6f5ec;
+  --warn: #8a4b00;
+  --warn-soft: #fdf1e0;
+  --danger: #a01c1c;
+  --danger-soft: #fbeaea;
+  --focus: #0b63a8;
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --shadow: 0 10px 30px rgba(15, 35, 55, 0.08);
+  --shadow-soft: 0 2px 8px rgba(15, 35, 55, 0.06);
+  --font: 'Segoe UI', 'Noto Sans', 'Noto Sans Devanagari', 'Noto Sans Kannada', system-ui, -apple-system,
+    'Helvetica Neue', Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button,
+select,
+textarea,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: var(--brand);
+}
+
+a:hover {
+  color: var(--brand-strong);
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  z-index: 100;
+  background: var(--brand);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: top 150ms ease;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  padding: 10px 18px;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  transition:
+    background 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.button--primary {
+  background: var(--brand);
+  color: #fff;
+}
+
+.button--primary:hover:not(:disabled) {
+  background: var(--brand-strong);
+}
+
+.button--ghost {
+  border-color: var(--border);
+  background: var(--surface);
+  color: var(--ink-soft);
+}
+
+.button--ghost:hover:not(:disabled) {
+  border-color: var(--brand);
+  color: var(--brand-strong);
+  background: var(--brand-soft);
+}
+
+.button--small {
+  padding: 6px 12px;
+  font-size: 0.86rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.badge--demo {
+  background: var(--warn-soft);
+  color: var(--warn);
+  border: 1px solid #f0cf9b;
+}
+
+.badge--warn {
+  background: var(--danger-soft);
+  color: var(--danger);
+  border: 1px solid #efc4c4;
+}
+
+.badge--fixture {
+  background: var(--warn-soft);
+  color: var(--warn);
+  border: 1px solid #f0cf9b;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.7rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: var(--surface-muted);
+  color: var(--ink-soft);
+}
+
+.chip--high {
+  background: var(--ok-soft);
+  color: var(--ok);
+  border-color: #bfe3cd;
+}
+
+.chip--medium {
+  background: var(--warn-soft);
+  color: var(--warn);
+  border-color: #f0cf9b;
+}
+
+.chip--low {
+  background: var(--danger-soft);
+  color: var(--danger);
+  border-color: #efc4c4;
+}
+
+.chip--type {
+  background: var(--brand-soft);
+  color: var(--brand-strong);
+  border-color: #bfdde2;
+}

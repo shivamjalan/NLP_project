@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-01T00:00:00.000Z",
+  "notes": "Reviewed registry for the IRCTC pilot. Only URLs verified by a real HTTP request during development are listed. Entries with active=false are recorded but not ingested until an administrator reviews them. Do not add unverified or guessed URLs.",
+  "sources": [
+    {
+      "url": "https://www.indianrail.gov.in/",
+      "title": "Indian Railways - Passenger Reservation Enquiry (official landing page)",
+      "authority": "Indian Railways",
+      "service": "irctc",
+      "language": "en",
+      "sourceType": "official_page",
+      "active": true,
+      "lastReviewedAt": "2026-11-01T00:00:00.000Z",
+      "notes": "Verified with an HTTP 200 response on 2026-11-01. Landing page only; it does not document every IRCTC policy."
+    },
+    {
+      "url": "https://indianrailways.gov.in/",
+      "title": "Ministry of Railways - official portal",
+      "authority": "Ministry of Railways, Government of India",
+      "service": "irctc",
+      "language": "en",
+      "sourceType": "official_page",
+      "active": true,
+      "lastReviewedAt": "2026-11-01T00:00:00.000Z",
+      "notes": "Verified with an HTTP 200 response on 2026-11-01. Landing page only; deep-linked policy pages must be added after individual verification."
+    },
+    {
+      "url": "https://contents.irctc.co.in/en/faq.html",
+      "title": "IRCTC mobile FAQ (legacy page)",
+      "authority": "IRCTC",
+      "service": "irctc",
+      "language": "en",
+      "sourceType": "faq",
+      "active": false,
+      "lastReviewedAt": "2026-11-01T00:00:00.000Z",
+      "notes": "Verified with an HTTP 200 response on 2026-11-01, but the page describes an older GPRS/Java-era mobile service. Kept inactive until an administrator confirms it is still accurate."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "@bharatseva/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node src/server.js",
+    "start": "node src/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "seed": "node ../scripts/seed.js",
+    "ingest": "node ../scripts/ingest.js",
+    "evaluate": "node ../scripts/evaluate.js"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.2",
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "mongoose": "^8.9.5",
+    "pino": "^9.6.0",
+    "pino-http": "^10.4.0",
+    "robots-parser": "^3.0.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^10.1.4",
+    "supertest": "^7.0.0",
+    "vitest": "^2.1.8"
+  },
+  "optionalDependencies": {
+    "pdfjs-dist": "^4.10.38"
+  }
+}
